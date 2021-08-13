@@ -8,7 +8,14 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-minimal-blog/gatsby-config.js
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitle: `Kangthink Dev Blog`,
+    siteTitleAlt: `Kangthink Dev Blog - Personal dev stories`,
+    siteHeadline: `Minimal Blog - Personal dev stories`,
+    siteUrl: `https://kangthink.github.io/`,
+    siteDescription: `개발 경험을 다양하게 풀어냅니다.`,
+    siteLanguage: `ko`,
+    siteImage: `/banner.jpg`,
+    author: `@kangthink`,
   },
   plugins: [
     {
@@ -21,18 +28,14 @@ module.exports = {
             slug: `/blog`,
           },
           {
-            title: `About`,
-            slug: `/about`,
+            title: `Tags`,
+            slug: `/tags`,
           },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            name: `Github`,
+            url: `https://github.com/kangthink`,
           },
         ],
       },
@@ -64,9 +67,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `kangthink-dev-blog - Personal dev stories`,
+        short_name: `kangthink-dev-blog`,
+        description: `개발 경험을 다양하게 풀어냅니다.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,

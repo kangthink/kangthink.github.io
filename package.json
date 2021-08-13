@@ -1,11 +1,10 @@
 {
   "private": true,
-  "name": "minimal-blog",
-  "description": "Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.",
-  "version": "1.3.11",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "name": "kangtink-dev-blog",
+  "description": "개발 경험을 공유",
+  "version": "1.0.0",
+  "author": "Kangthink <kangthink@gmail.com>",
   "license": "0BSD",
-  "starter-name": "gatsby-starter-minimal-blog",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -13,7 +12,8 @@
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public -b publish"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^3.0.0",
@@ -31,6 +31,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "gh-pages": "^3.2.3"
   }
 }
