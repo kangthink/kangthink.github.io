@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://kangthink.github.io/sitemap.xml
