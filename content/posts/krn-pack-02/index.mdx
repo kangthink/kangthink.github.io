@@ -1,0 +1,175 @@
+---
+title: numpy (feat. 직관) 
+date: 2021-08-18
+description: 넘파이를 다루는 법을 시각적인 정보를 통해 직관적으로 설명합니다.
+tags:
+  - "format:tutorial:🚩"
+  - "ctype:pack:📄"
+  - "target:흰띠:⬜️"
+banner: ./banner.jpg
+---
+import { Message } from "theme-ui"
+import Comment from "../../../src/components/comments"
+
+작성중 입니다...
+
+<타이틀>
+<이미지 그림 + 설명>
+
+abstract
+- python으로 데이터를 다룰 때, 특히 숫자로 이루어진 데이터를 다룰 때 필수적으로 사용되는 라이브러리.
+- pandas, opencv, tensorflow, pytorch 등 라이브러리 모두 numpy 데이터 타입을 그대로 사용하거나 호환해서 사용가능.
+- numpy API를 시각적인 설명을 통해 데이터와 상호작용하는 패턴을 발견하도록.
+
+- 비유
+  - 그림과 같은 방식으로 동작한다.
+  - 실제 메모리에 같은 모양으로 있지는 않다.
+  - 마치 ...처럼 동작한다.
+
+
+- 관찰하기
+  - numpy 코드
+    - arr = np.numpy([])
+    - arr = np.numpy([1,1,2])
+    - arr.shape
+    - arr[:2]
+    - arr.concat()
+    - 다른 타입
+
+- 높은 차원
+  - 1차  축 
+  - 2차
+  - 3차
+  row major ( vs colum major)
+  - 앞에서 더해진다.
+
+
+- 생성하다
+  - np.arange(25)
+  - np.reshape(5,5)
+  - np.ones((3,1))
+  
+
+
+- 생성된 numpy 전체를 보다
+  - <그림 - 3*4 크기의 블럭 이미지> - 이미지 넘기면서 보도록
+  - 모양
+  - 디멘션
+  - 크기 (전체 정보 몇개?)
+  - 데이터 타입 (항상 동일하게)
+    - https://numpy.org/devdocs/user/basics.types.html
+    - 코드 예시 a = []
+
+
+- 일부 보기 (slicing)
+  - row
+    - 하나
+      - 마지막 경우 (의도에 따라)
+  - column
+  
+  - fancy (항상 카피 만든다?)
+    - position
+      - indices = [1,2,-3]
+      - y = a[indices]
+      a[indeices] = 99
+      - 2차원. 대각선으로
+  - a[[1,2],[1,2]]
+
+
+    - mask (map & filter)
+      - mask = np.array([0,1,0,0], dtype=bool)
+      - y = a[mask]
+
+  (confusing?)
+    - __getitem__(...) 구현을 다르게
+    - 실제 소스 코드?
+
+
+
+- 집계해서 보다
+  - max
+  - min
+  - sum (axis=0)
+    - 없어지느 축, 혹은 축 방향
+  - mean
+  - argmax argmin
+  - unravel_index?
+
+  - 사용법
+    - np.max(a)
+    - a.max()
+
+- 조건에 맞는 인덱스 본다?
+  - np.where
+
+- 변경하기 {하나의 값}(할당)
+  - 공유하고 있다.
+  - 다양한 관점을 가지는 것. 데이터가 복사가 이루어지지 않음으로 메모리 효율적
+  - 복사할 수도 있다. copy()
+  - 하나씩
+  - slice 전체
+    - 같은 길이라면
+    - 혹은 전체 같은 걸로 a[-2:] = 99
+
+- 변경 (모양)
+  - flatten (copy)
+  - ravel (copy if needed)
+  연산하기 (더하고 ,곱하고, 비교하고)
+  - 규칙
+    - 모양이 적절한지 확인
+    - 수학연산은 element 기준
+    - 
+
+  - boadcasting
+  - 마스킹
+    - 하나씩.
+    - 전체 all.
+
+  - for loop no!
+    - 왜?
+    - 내부 구조
+    - https://numpy.org/doc/stable/reference/internals.html
+
+- 나아가기
+  - Structured arrays
+    - 생성
+    - 조회
+    - 연산
+
+- 활용
+    - 음수만 제거한다.
+     - 연산으로 음수 찾고
+     - 인덷ㄱ스 통해 값
+
+  - 이미지 blur 만들기
+
+  - 학생 점수
+
+- 내부 메모리 구조
+  - dtype ndim shape strides? data
+  - transpose? strides 만 바꾼다
+  - reshape
+  - 
+
+
+- 정리
+  - 정보의 생명주기
+  - 시작 (만들고)
+  - 있는 그대로 보고
+  - 변경하고
+  - 삭제하고
+
+
+
+- 참고
+  - inspired by.. 유튜브 비디오, 예시 보면서 하면 좋음
+
+
+- 어떤 종류? 1차, 2차
+- 정의? 차원, shape, size, 
+- 상태 보기 하나, 전체, (-, 생략)
+
+
+
+
+<Comment repo="kangthink/kangthink.github.io" theme="dark-blue"/>
