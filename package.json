@@ -13,7 +13,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b publish"
+    "deploy": "NODE_OPTIONS=--openssl-legacy-provider gatsby build && gh-pages -d public -b publish"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^3.0.0",
