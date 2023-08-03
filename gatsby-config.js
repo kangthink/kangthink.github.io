@@ -8,11 +8,11 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-minimal-blog/gatsby-config.js
-    siteTitle: `Kangthink Dev Blog`,
-    siteTitleAlt: `Kangthink Dev Blog - Personal dev stories`,
-    siteHeadline: `Minimal Blog - Personal dev stories`,
+    siteTitle: `Kangthink Blog`,
+    siteTitleAlt: `Kangthink Blog - Personal stories`,
+    siteHeadline: `Minimal Blog - Personal stories`,
     siteUrl: `https://kangthink.github.io/`,
-    siteDescription: `개발 경험을 다양하게 풀어냅니다.`,
+    siteDescription: `더 나아지려고 노력한 기록`,
     siteLanguage: `ko`,
     siteImage: `/banner.jpg`,
     author: `@kangthink`,
